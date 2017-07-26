@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "简单上手使用手册"
+date:   2017-07-26 10:40:17 +0800
+categories: technical
+---
+
+# 这是一个什么系统
+
+这是基于Jekyll构建的网站。Jekyll是一个静态网站生成工具，无需数据库，没有评论功能，使用Markdown书写。
+
+[Jekyll介绍](http://jekyll.com.cn/)
+
+[Markdown语法指南](https://segmentfault.com/markdown)
+
+
+# 我要如何发布文章
+
+你需要将git仓库的内容下载到本地，写文章，启动本地Jekyll服务，查看文章效果，反复调优你的文章内容和展示效果。然后再推送到git远程仓库，合并到master分支，即完成了发布新文章。
+
+
+安装ruby，并且版本为2.x.x
+
+安装Bundler
+```shell
+gem install bundler
+```
+
+将duiba.github.io仓库Fork到自己仓库，下载到本地
+
+执行命令，启动http服务
+```shell
+bundle exec jekyll serve
+
+```
+
+本地输入 http://localhost:4000 打开网站
+
+
+发布文章步骤如下：
+
+在 _posts 文件夹下创建文件，标题格式必须符合  YYYY-MM-DD-title.markdown ,标题中不要包含中文字符。文本内容格式为MarkDown格式，具体用法参考已经存在的文档格式。
+
+在本地提交推送内容到远程仓库
+
+在Github发起PullRequest 申请合并
+
+![图片](/imgs/pull_request.png)
